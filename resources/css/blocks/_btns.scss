@@ -1,0 +1,52 @@
+.btn {
+	&-outline {
+		position: relative;
+		z-index: 1;
+		padding: 11px 36px;
+
+		border-radius: 500px;
+
+		font-family: var(--font-family);
+		font-weight: 400;
+		font-size: 16px;
+		color: var(--text-color);
+		text-align: center;
+
+		transition: opacity 0.2s ease-in;
+
+		&::before {
+			content: '';
+			position: absolute;
+			top: 0;
+			left: 0;
+			right: 0;
+			bottom: 0;
+			border-radius: 500px;
+			padding: 2px;
+			background: linear-gradient(to right, #ff0076, #ff8c00);
+			-webkit-mask:
+					linear-gradient(#fff 0 0) content-box,
+					linear-gradient(#fff 0 0);
+			-webkit-mask-composite: destination-out;
+							mask-composite: exclude;
+			z-index: -1;
+		}
+
+		&:hover {
+			opacity: 0.8;
+		}
+
+		&:active {
+			position: relative;
+			top: 1px;
+		}
+	}
+
+	&-link {
+		font-family: var(--font-family);
+		font-weight: 400;
+		font-size: 14px;
+		text-align: center;
+		color: var(--btn-link);
+	}
+}

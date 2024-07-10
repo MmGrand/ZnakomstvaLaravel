@@ -1,0 +1,49 @@
+.footer {
+	margin-top: auto;
+	padding: 30px 0;
+	color: #eee;
+
+	&__wrapper {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+
+	& .menu {
+		display: flex;
+		align-items: center;
+		gap: 30px;
+
+		&-item {
+			font-family: var(--font-family);
+			font-weight: 400;
+			font-size: 14px;
+			color: #eee;
+		}
+	}
+
+	& .language-select {
+		cursor: pointer;
+		border: none;
+
+		font-family: var(--font-family);
+		font-weight: 400;
+		font-size: 14px;
+		color: #eee;
+
+		&__item {
+
+		}
+	}
+
+	& .copyright {
+		font-family: var(--font-family);
+		font-weight: 400;
+		font-size: 14px;
+		color: #eee;
+	}
+
+	& .copyright p + p {
+		margin-top: 0.5em;
+	}
+}

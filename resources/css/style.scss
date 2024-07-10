@@ -1,3 +1,46 @@
 @import "reset";
 @import "vars";
 @import "mixins";
+
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital@0;1&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+
+html, body {
+	font-family: var(--font-family);
+
+	/* Color mode */
+	background-color: var(--page-bg);
+	color: var(--text-color);
+}
+
+#app {
+	display: flex;
+	flex-direction: column;
+	min-height: 100vh;
+}
+
+.container {
+	margin: 0 auto;
+	padding: 0 15px;
+	max-width: 1210px;
+}
+
+.none {
+	display: none !important;
+}
+
+.title-1 {
+	font-family: var(--font-family);
+	font-weight: 500;
+	font-size: 60px;
+	line-height: 1.5;
+	text-align: center;
+	color: var(--text-color);
+}
+
+/* blocks */
+@import 'blocks/header';
+@import 'blocks/footer';
+@import 'blocks/btns';
+@import 'blocks/home';
+@import 'blocks/form';
+@import 'blocks/input';

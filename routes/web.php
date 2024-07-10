@@ -7,4 +7,4 @@ Route::get('/', function () {
     return Inertia::render('Welcome', [
         'title' => 'Welcome to Inertia.js with Vue 3 and Vite',
     ]);
-});
+})->name('home');
