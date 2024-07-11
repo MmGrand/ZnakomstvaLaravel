@@ -6,9 +6,13 @@
 				<img src="/public/images/logo.png" alt="Logo">
 				<p>Znakomstva.com</p>
 			</Link>
-			<div class="header__info">
+			<div v-if="isLoginPage" class="header__info">
 				<p>Впервые здесь?</p>
-				<a href="#!" class="btn-outline">Регистрация</a>
+				<Link :href="route('register')" class="btn btn-outline">Регистрация</Link>
+			</div>
+			<div v-else class="header__info">
+				<p>Уже есть аккаунт?</p>
+				<Link :href="route('home')" class="btn btn-outline">Войти</Link>
 			</div>
 		</div>
 	</div>
@@ -40,7 +44,10 @@
 </template>
 
 <script setup>
-import { Link } from "@inertiajs/inertia-vue3"
-import { ref } from "vue";
+import { Link, usePage } from "@inertiajs/inertia-vue3"
+import { ref, computed } from "vue";
 const currentYear = ref(new Date().getFullYear());
+
+const page = usePage();
+const isLoginPage = computed(() => page.props.value.currentRouteName === 'home');
 </script>

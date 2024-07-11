@@ -1,0 +1,32 @@
+.gender {
+	display: flex;
+	justify-content: center;
+	gap: 10px;
+	width: 100%;
+  box-sizing: border-box;
+
+	&__btn {
+		padding: 17px 75px;
+		cursor: pointer;
+    outline: none;
+		border: 1px solid transparent;
+
+		border-radius: 500px;
+		&--male {
+			border: 1px solid #0575e6;
+			&.selected {
+				box-shadow: 0 20px 30px 0 rgba(179, 34, 31, 0.1);
+        background: linear-gradient(90deg, #0575e6 0%, #021b79 100%);
+        border: none;
+			}
+		}
+		&--female {
+			border: 1px solid #ff0076;
+			&.selected {
+				box-shadow: 0 20px 30px 0 rgba(255, 0, 118, 0.3);
+        background: linear-gradient(90deg, #ff0076 0%, #ff8c00 100%);
+        border: none;
+			}
+		}
+	}
+}

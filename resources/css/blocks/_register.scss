@@ -1,8 +1,7 @@
-.home {
-
+.register {
 	&__wrapper {
 		max-width: 846px;
-		margin: 210px auto 0;
+		margin: 65px auto 0;
 		color: var(--text-color);
 
 		display: flex;
@@ -18,5 +17,6 @@
 		font-size: 16px;
 		line-height: 1.5;
 		text-align: center;
+		color: var(--typography);
 	}
 }

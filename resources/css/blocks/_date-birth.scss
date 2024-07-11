@@ -1,0 +1,38 @@
+.date-birth {
+	display: flex;
+	flex-direction: column;
+	gap: 10px;
+	width: 100%;
+  box-sizing: border-box;
+
+	&__label {
+		font-family: var(--font-family);
+		font-weight: 400;
+		font-size: 14px;
+		color: var(--typography);
+		cursor: default;
+	}
+
+	&__content {
+		display: flex;
+		gap: 5px;
+		width: 100%;
+  	box-sizing: border-box;
+	}
+
+	&__select {
+		flex: 1;
+		padding: 20px;
+		border-radius: 500px;
+		background: var(--input-inactive-bg);
+
+		cursor: pointer;
+		outline: none;
+
+		font-family: var(--font-family);
+		font-weight: 400;
+		font-size: 16px;
+		color: var(--input-inactive-text);
+		text-align: center;
+	}
+}

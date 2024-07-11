@@ -37,6 +37,27 @@ html, body {
 	color: var(--text-color);
 }
 
+.title-2 {
+	font-family: var(--font-family);
+	font-weight: 500;
+	font-size: 36px;
+	line-height: 1.5;
+	text-align: center;
+	color: var(--text-color);
+}
+
+.fade-enter-active, .fade-leave-active {
+  transition: opacity 0.3s ease;
+}
+
+.fade-enter-from, .fade-leave-to {
+  opacity: 0;
+}
+
+.fade-enter-to, .fade-leave-from {
+  opacity: 1;
+}
+
 /* blocks */
 @import 'blocks/header';
 @import 'blocks/footer';
@@ -44,3 +65,9 @@ html, body {
 @import 'blocks/home';
 @import 'blocks/form';
 @import 'blocks/input';
+@import 'blocks/errors';
+@import 'blocks/popups';
+@import 'blocks/register';
+@import 'blocks/select';
+@import 'blocks/date-birth';
+@import 'blocks/gender';
