@@ -8,7 +8,7 @@ html, body {
 	font-family: var(--font-family);
 
 	/* Color mode */
-	background-color: var(--page-bg);
+	background-color: var(--bg-secondary);
 	color: var(--text-color);
 }
 
@@ -62,7 +62,7 @@ html, body {
 @import 'blocks/header';
 @import 'blocks/footer';
 @import 'blocks/btns';
-@import 'blocks/home';
+@import 'blocks/login';
 @import 'blocks/form';
 @import 'blocks/input';
 @import 'blocks/errors';

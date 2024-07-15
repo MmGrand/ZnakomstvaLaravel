@@ -37,7 +37,7 @@ const years = Array.from({ length: 70 }, (v, k) => currentYear - 18 - k);
 
 watch([day, month, year], ([newDay, newMonth, newYear]) => {
   if (newDay && newMonth && newYear) {
-		const dateOfBirth = new Date(newYear, newMonth - 1, newDay);
+		const dateOfBirth = `${newYear}-${String(newMonth).padStart(2, '0')}-${String(newDay).padStart(2, '0')}`;
     emit('update:dob', dateOfBirth);
   }
 });

@@ -2,7 +2,7 @@
 <header class="header">
 	<div class="container">
 		<div class="header__wrapper">
-			<Link :href="route('home')" class="header__logo">
+			<Link :href="route('login')" class="header__logo">
 				<img src="/public/images/logo.png" alt="Logo">
 				<p>Znakomstva.com</p>
 			</Link>
@@ -12,7 +12,7 @@
 			</div>
 			<div v-else class="header__info">
 				<p>Уже есть аккаунт?</p>
-				<Link :href="route('home')" class="btn btn-outline">Войти</Link>
+				<Link :href="route('login')" class="btn btn-outline">Войти</Link>
 			</div>
 		</div>
 	</div>
@@ -49,5 +49,5 @@ import { ref, computed } from "vue";
 const currentYear = ref(new Date().getFullYear());
 
 const page = usePage();
-const isLoginPage = computed(() => page.props.value.currentRouteName === 'home');
+const isLoginPage = computed(() => page.props.value.currentRouteName === 'login');
 </script>

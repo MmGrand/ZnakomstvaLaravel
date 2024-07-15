@@ -73,12 +73,14 @@ const form = useForm({
 	name: '',
   email: '',
   password: '',
-	dateOfBirth: '',
+	birth_date: '',
 	gender: '',
 })
 
 const submit = () => {
-
+  form.post(route('register'), {
+      onFinish: () => form.reset('password', 'password_confirmation'),
+  });
 };
 
 const togglePasswordVisibility = () => {
@@ -86,12 +88,12 @@ const togglePasswordVisibility = () => {
 }
 
 const updateDateOfBirth = (dob) => {
-	form.dateOfBirth = dob;
-	console.log(`Дата рождения в компоненте формы: ${form.dateOfBirth}`);
+	form.birth_date = dob;
+	console.log(`Дата рождения в компоненте формы: ${form.birth_date}`);
 }
 
 const updateGender = (gender) => {
-	form.gender = gender === 'male' ? 0 : 1;
+	form.gender = gender === 'male' ? 1 : 2;
 	console.log(`Пол в компоненте формы: ${form.gender}`);
 }
 
